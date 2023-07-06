@@ -44,6 +44,7 @@ function addGamesToPage(games) {
             <img class="game-img" src="${game.img}" alt="${game.name}" />
             <h4>Name: ${game.name}</h4>
             <p>Description: ${game.description}</p>
+            <p>Backers: ${game.backers}</p>
         `;
 
         // append the game to the games-container
