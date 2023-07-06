@@ -20,7 +20,13 @@ body {
 }
 
 .stats-container {
-    display: flex;
+    display: flexbox;
+    align-items: center;
+}
+
+#first-game:hover, #second-game:hover{
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
