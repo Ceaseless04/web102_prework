@@ -42,8 +42,8 @@ function addGamesToPage(games) {
         // between the end of the src attribute and the end of the tag ("/>")
         game_card_div.innerHTML = `
             <img class="game-img" src="${game.img}" alt="${game.name}" />
-            <h4>Name: ${game.name}</h4>
-            <p>Description: ${game.description}</p>
+            <h4>${game.name}</h4>
+            <p>${game.description}</p>
             <p>Backers: ${game.backers}</p>
         `;
 
@@ -67,16 +67,23 @@ addGamesToPage(GAMES_JSON);
 const contributionsCard = document.getElementById("num-contributions");
 
 // use reduce() to count the number of total contributions by summing the backers
-
+const contributions = GAMES_JSON.reduce((initial, backer) => {return initial + backer.backers}, 0);
 
 // set the inner HTML using a template literal and toLocaleString to get a number with commas
-
+contributionsCard.innerHTML = `
+    <p>${contributions.toLocaleString('en-US')}</p>
+`;
 
 // grab the amount raised card, then use reduce() to find the total amount raised
 const raisedCard = document.getElementById("total-raised");
 
-// set inner HTML using template literal
+// using reduce to count the number of total money raised by summing pledges
+const money_raised = GAMES_JSON.reduce((initial, pledge) => {return initial + pledge.pledged}, 0);
 
+// set inner HTML using template literal
+raisedCard.innerHTML = `
+    <p>${money_raised.toLocaleString('en-US')}</p>
+`;
 
 // grab number of games card and set its inner HTML
 const gamesCard = document.getElementById("num-games");
