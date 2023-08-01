@@ -88,6 +88,11 @@ raisedCard.innerHTML = `
 // grab number of games card and set its inner HTML
 const gamesCard = document.getElementById("num-games");
 
+const total_num_of_games = GAMES_JSON.reduce((acc) => acc + 1, 0);
+
+gamesCard.innerHTML = `
+    <p>${total_num_of_games.toLocaleString('en-US')}</p>
+`;
 
 /*************************************************************************************
  * Challenge 5: Add functions to filter the funded and unfunded games
