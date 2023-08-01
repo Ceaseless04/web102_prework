@@ -79,3 +79,8 @@ button {
     margin: 1%;
     border-radius: 7px;
 }
+
+/* adding a bit of my own css for challenge 5 step 4 */
+button:hover {
+    cursor: pointer;
+}
