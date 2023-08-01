@@ -82,7 +82,7 @@ const money_raised = GAMES_JSON.reduce((initial, pledge) => {return initial + pl
 
 // set inner HTML using template literal
 raisedCard.innerHTML = `
-    <p>${money_raised.toLocaleString('en-US')}</p>
+    <p>$${money_raised.toLocaleString('en-US')}</p>
 `;
 
 // grab number of games card and set its inner HTML
