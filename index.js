@@ -155,7 +155,7 @@ const total_unfunded_games = GAMES_JSON.filter((game) => {return game.pledged < 
 const is_greater = total_unfunded_games > 0;
 
 const display_unfunded = `A total of $${money_raised.toLocaleString('en-US')} has been raised for ${total_num_of_games} games. Currently, ${is_greater ? 
-    `${total_unfunded_games} games remain unfunded. We need your helpto fund these amazing games!` : "0 games remain unfunded. Thank you for your help!"}`;
+    `${total_unfunded_games} games remain unfunded. We need your help to fund these amazing games!` : "0 games remain unfunded. Thank you for your help!"}`;
 
 // create a new DOM element containing the template string and append it to the description container
 const p_tag = document.createElement("p");
